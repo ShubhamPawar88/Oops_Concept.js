@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo" style="color: brown;font-style:italic; font-size: 2em;"></p>
+    <p id="demo1" style="color: blue;font-style:italic; font-size: 2em;"></p>
+    <p id="demo2" style="color: green;font-style:italic; font-size: 2em;"></p>
+    <p id="demo3" style="color: aqua;font-style:italic; font-size: 2em;"></p>
+    <script>
+        class Employee
+        {
+           constructor(eid,ename,esal,address)
+           {
+            this.eid=eid;
+            this.ename=ename;
+            this.esal=esal;
+            this.address=address;
+           }
+           printvalue()
+           {
+              document.getElementById("demo").innerHTML="<br> id of employee="+this.eid;
+              document.getElementById("demo1").innerHTML="<br> name of employee="+this.ename;
+              document.getElementById("demo2").innerHTML="<br> salary of employee="+this.esal;
+              document.getElementById("demo3").innerHTML="<br> address of employee="+this.address;
+           }
+        }
+        let emp=new Employee(101,"ram",20000,"pune");//object creation
+        emp.printvalue( );
+    </script>
+</body>
+</html>

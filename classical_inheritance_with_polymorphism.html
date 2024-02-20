@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //polymorphism => poly(many) + morphs(forms)
+           //one/same object/function is having multiple forms is called as polymorphism
+           //e.g person 
+
+           //parent class is also called as super,base,old class
+           //child class is also called as sub, derived,new class
+
+           //Inheritance is used to achieve code resuability and it is used to reduce line of code of the application....
+           //bcz,in inheritance we don't have to create an object for each classes...
+          // classes...we just have to create an object for child class only
+
+           //in below, code we have defiend only one function area in each of the class with different paramenter means here we are achieving polymorphism(one function having different functionality)
+        class Shape{
+            area(length)
+            {
+                document.write("<br> area of length="+(length*length));
+
+            }
+        }      
+            //child        parent
+        class Rect extends Shape{
+              area(length,wid)
+              {
+                super.area(length,wid);//calling super class function
+                //sup.area(7);
+                document.write("<br> area of Rect="+(length*wid));
+              }
+        }
+        class Box extends Rect{
+              area(length,wid,bredth)
+              {
+                super.area(length,wid);//calling super class
+                document.write("<br> volume of box="+(length*wid*bredth));//12
+              }
+        }
+        //creating an object
+             //here, we are creating an object of Box class bcz,box is child most class here....as Box is extending a class REct and Rect is extending a class Shape
+        let b=new  Box();
+        b.area(2,3,2);//box area //12
+    </script>
+</body>
+</html>

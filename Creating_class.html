@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       //constructor => constrcutor is same as a fuction but the diffrence is  constructor should always be define within class. And constructor name should always be a constrcutor whereas function name is any valid javascript identifier
+     //2.Constructor cannot be hoisted like JS functions
+     //constructor must be call at a time of creation of an object
+     class student
+    {
+       constructor(id,name,marks) //here id,name,marks are having block scope
+       {
+        this.id=id; //here this.id,this,.name,this.marks are having global scope
+
+        this.name=name;
+        this.marks=marks;
+
+       }
+       printData()
+       {
+            document.write("<br> id of student="+this.id);
+            document.write("<br> name of student="+this.name);
+            document.write("<br> marks of student="+this.marks);
+       }
+    }
+
+    let stud=new student(101,"shubham",86.40);//object creation
+    stud.printData( );//here, we are function with object name "stud" because this function printData() is a part of class Student
+   </script>
+</body>
+</html>
